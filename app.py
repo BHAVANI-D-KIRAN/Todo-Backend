@@ -18,7 +18,7 @@ migrate = Migrate(app, db)
 # Creating a Model
 class Todo(db.Model):
     __tablename__ = "todo"
-        id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     complete = db.Column(db.Boolean, default=False)
     date_modified = db.Column(db.DateTime, default=db.func.current_timestamp())
